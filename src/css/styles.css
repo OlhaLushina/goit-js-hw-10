@@ -18,3 +18,45 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+/* Список країн */
+.country-list {
+  margin: 0;
+  padding: 0;
+}
+
+.country-list .item {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.country-list .flag {
+  margin-right: 10px;
+}
+
+/* Інформація про країну */
+.country-info .title {
+  font-size: 55px;
+}
+
+.country-info .flag {
+  margin-right: 10px;
+}
+
+.country-info .list {
+  margin: 0;
+  padding: 0;
+}
+
+.country-info .item {
+  list-style: none;;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.country-info .label {
+  font-weight: bold;
+}
