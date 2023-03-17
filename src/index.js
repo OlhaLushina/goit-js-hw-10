@@ -33,12 +33,14 @@ function onSearchBoxChange(e) {
         // Кількість країн у результаті пошуку
         const numCountries = response.length;
 
-        if (numCountries > 10) {
+        if (numCountries === 0) {
+            Notiflix.Notify.failure("Oops, there is no country with that name");
+        } else if (numCountries > 10) {
             Notiflix.Notify.warning("Too many matches found. Please enter a more specific name.");
         } else if (numCountries >= 2 && numCountries <= 10) {
             // Виводимо інформацію про декілька країн
             refs.countryList.innerHTML = getCountryListCard(response);
-        } else {
+        } else if (numCountries === 1) {
             // Виводимо інформацію про країну
             refs.countryInfo.innerHTML = getCountryCard(response[0]);
         }
